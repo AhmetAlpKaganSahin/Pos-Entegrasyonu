@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/Pos_OdemeFormu.css') }}">
+  <title>İşlem Sorgulama</title>
+</head>
+<body>
+  <h2>İşlem Sorgulama / Dekont Al</h2>
+  <form action="/sorgula" method="POST">
+  <label>Sipariş ID:</label><br>
+  <input type="text" name="siparis_id"><br><br>
+
+  <label>İşlem ID:</label><br>
+  <input type="text" name="islem_id"><br><br>
+
+  <label>Dekont ID:</label><br>
+  <input type="text" name="dekont_id"><br><br>
+
+  <button type="submit">Sorgula</button>
+</form>
+    <br><br>
+    <button type="submit">Sorgula</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İptal Başarılı</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Pos_OdemeFormu.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>İşlem Başarıyla İptal / İade Edildi</h2>
+    <p><strong>Sonuç:</strong> {{ sonuc }}</p>
+    <p><strong>Mesaj:</strong> {{ sonuc_str }}</p>
+    <p><strong>Banka Auth Code:</strong> {{ bank_auth_code }}</p>
+    <p><strong>Bank Trans ID:</strong> {{ bank_trans_id }}</p>
+    <p><strong>Host Ref Num:</strong> {{ bank_host_ref }}</p>
+    <pre>{{ bank_extra|safe }}</pre>
+    <a href="/">Menüye Dön</a>
+</div>
+</body>
+</html>

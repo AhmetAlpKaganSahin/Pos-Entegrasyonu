@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İşlem İptali / İadesi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Pos_OdemeFormu.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>İptal / İade Formu</h2>
+    <form action="/iptal-islem" method="POST">
+        <label>Sipariş ID:</label><br>
+        <input type="text" name="siparis_id" required><br>
+        <label>Tutar:</label><br>
+        <input type="text" name="tutar" value="1.00" required><br>
+        <label>Durum:</label><br>
+        <select name="durum">
+            <option value="IADE">İade</option>
+            <option value="IPTAL">İptal</option>
+        </select><br>
+        <button type="submit">Gönder</button>
+    </form>
+</div>
+</body>
+</html>

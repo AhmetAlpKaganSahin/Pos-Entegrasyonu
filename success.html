@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>İşlem Başarılı</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #e6f4ea;
+      color: #2e7d32;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(46, 125, 50, 0.25);
+      max-width: 480px;
+      width: 90%;
+      text-align: center;
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: left;
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    li {
+      padding: 8px 0;
+      border-bottom: 1px solid #d9d9d9;
+      word-break: break-word;
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+    .success-icon {
+      margin-bottom: 20px;
+      display: inline-block;
+      filter: drop-shadow(0 0 3px #2e7d32);
+    }
+    svg {
+      width: 64px;
+      height: 64px;
+      fill: #34c759;
+      stroke: #2e7d32;
+      stroke-width: 2;
+      transition: transform 0.3s ease;
+    }
+    .success-icon:hover svg {
+      transform: scale(1.1);
+      fill: #28a745;
+      filter: drop-shadow(0 0 6px #28a745);
+    }
+    form {
+      margin-top: 20px;
+    }
+    button {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="success-icon" aria-label="Başarılı">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" fill="#34c759" />
+        <polyline points="7 13 10 16 17 9" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h2>{{ sonuc_str }}</h2>
+    <ul>
+      <li><strong>İşlem ID:</strong> {{ islem_id }}</li>
+      <li><strong>Banka İşlem ID:</strong> {{ bank_trans_id }}</li>
+      <li><strong>Bank Auth Kodu:</strong> {{ bank_auth_code }}</li>
+      <li><strong>Sipariş ID:</strong> {{ siparis_id }}</li>
+      <li><strong>UCD HTML:</strong> {{ ucd_html }}</li>
+    </ul>
+
+    </form>
+  </div>
+</body>
+</html>

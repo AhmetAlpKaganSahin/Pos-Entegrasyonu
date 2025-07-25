@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İptal Hatası</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Pos_OdemeFormu.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>İptal / İade Başarısız</h2>
+    <p><strong>Sonuç:</strong> {{ sonuc }}</p>
+    <p><strong>Mesaj:</strong> {{ sonuc_str }}</p>
+    <p><strong>Banka Kodu:</strong> {{ banka_kod }}</p>
+    <p>Lütfen bilgileri kontrol edin ve tekrar deneyin.</p>
+    <a href="/">Menüye Dön</a>
+</div>
+</body>
+</html>
